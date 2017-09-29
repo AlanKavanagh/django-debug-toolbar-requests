@@ -13,7 +13,7 @@ class RequestsDebugPanel(Panel):
     template = 'requests_toolbar/panels/requests.html'
 
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super(RequestsDebugPanel, self).__init__(*args, **kwargs)
         operation_tracker.install_trackers()
 
     def process_request(self, request):
